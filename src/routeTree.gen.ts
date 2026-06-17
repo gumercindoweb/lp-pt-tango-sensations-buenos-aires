@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PtShowDeTangoCafeTortoniRouteImport } from './routes/pt.show-de-tango-cafe-tortoni'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PtShowDeTangoCafeTortoniRoute =
+  PtShowDeTangoCafeTortoniRouteImport.update({
+    id: '/pt/show-de-tango-cafe-tortoni',
+    path: '/pt/show-de-tango-cafe-tortoni',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/pt/show-de-tango-cafe-tortoni': typeof PtShowDeTangoCafeTortoniRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/pt/show-de-tango-cafe-tortoni': typeof PtShowDeTangoCafeTortoniRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/pt/show-de-tango-cafe-tortoni': typeof PtShowDeTangoCafeTortoniRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/pt/show-de-tango-cafe-tortoni'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/pt/show-de-tango-cafe-tortoni'
+  id: '__root__' | '/' | '/pt/show-de-tango-cafe-tortoni'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PtShowDeTangoCafeTortoniRoute: typeof PtShowDeTangoCafeTortoniRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pt/show-de-tango-cafe-tortoni': {
+      id: '/pt/show-de-tango-cafe-tortoni'
+      path: '/pt/show-de-tango-cafe-tortoni'
+      fullPath: '/pt/show-de-tango-cafe-tortoni'
+      preLoaderRoute: typeof PtShowDeTangoCafeTortoniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PtShowDeTangoCafeTortoniRoute: PtShowDeTangoCafeTortoniRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
