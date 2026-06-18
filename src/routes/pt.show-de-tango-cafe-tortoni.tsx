@@ -7,6 +7,7 @@ import coupleImg from "@/assets/tango-couple.jpg";
 
 const WHATSAPP_URL = "https://wa.me/5491100000000?text=Ol%C3%A1%21%20Quero%20reservar%20o%20show%20de%20tango%20no%20Caf%C3%A9%20Tortoni.";
 const ROUTE_PATH = "/pt/show-de-tango-cafe-tortoni";
+const CANONICAL_URL = "https://sensacionesdetango.com/pt/show-de-tango-cafe-tortoni";
 
 const FAQS = [
   {
@@ -23,7 +24,7 @@ const FAQS = [
   },
   {
     q: "O Café Tortoni fica perto do Obelisco?",
-    a: "Sim. O Café Tortoni está na Avenida de Mayo 825, no coração histórico de Buenos Aires, a poucos minutos a pé do Obelisco, Plaza de Mayo e Avenida Corrientes.",
+    a: "Sim. O Café Tortoni está na Avenida de Mayo 829, no coração histórico de Buenos Aires, a poucos minutos a pé do Obelisco, Plaza de Mayo e Avenida Corrientes.",
   },
   {
     q: "O show é recomendado para brasileiros?",
@@ -35,7 +36,7 @@ const FAQS = [
   },
   {
     q: "O show inclui jantar?",
-    a: "Oferecemos opções com consumação no café e pacotes com jantar. Informe pelo WhatsApp a data desejada e enviamos as opções disponíveis para essa noite.",
+    a: "O show não inclui jantar. É possível consumir no café antes do espetáculo. O pagamento é feito em dinheiro no local.",
   },
 ];
 
@@ -57,11 +58,11 @@ export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:url", content: ROUTE_PATH },
+      { property: "og:url", content: CANONICAL_URL },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: ROUTE_PATH }],
+    links: [{ rel: "canonical", href: CANONICAL_URL }],
     scripts: [
       {
         type: "application/ld+json",
@@ -90,7 +91,7 @@ export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
             name: "Café Tortoni",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Av. de Mayo 825",
+              streetAddress: "Av. de Mayo 829",
               addressLocality: "Buenos Aires",
               addressCountry: "AR",
             },
@@ -181,8 +182,8 @@ function Hero() {
           </div>
 
           <ul className="flex flex-wrap gap-x-8 gap-y-2 mt-10 text-[0.78rem] uppercase tracking-[0.22em] font-semibold text-tertiary-w">
-            <li>· Av. de Mayo 825</li>
-            <li>· 1h30 de espetáculo</li>
+            <li>· Av. de Mayo 829</li>
+            <li>· 1h de espetáculo</li>
             <li>· Atendimento em PT/ES</li>
             <li>· Lugares limitados</li>
           </ul>
@@ -211,6 +212,37 @@ function QuickAnswers() {
             <div key={it.q} className="card-tango">
               <p className="font-display text-lg text-ambar mb-2 leading-tight">{it.q}</p>
               <p className="text-secondary-w text-[0.95rem]">{it.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SocialProof() {
+  const stats = [
+    { value: "4.9", unit: "/5", label: "TripAdvisor" },
+    { value: "#3", unit: "", label: "em Buenos Aires" },
+    { value: "93.6%", unit: "", label: "Excelente" },
+    { value: "2026", unit: "", label: "Travellers' Choice" },
+  ];
+  return (
+    <section className="py-10 bg-ink border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-5 lg:px-10">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          {stats.map((s, i) => (
+            <div key={s.label} className="flex items-center gap-12">
+              <div className="text-center">
+                <p className="font-display text-4xl text-ambar leading-none">
+                  {s.value}
+                  {s.unit && <span className="text-2xl text-ambar-soft">{s.unit}</span>}
+                </p>
+                <p className="eyebrow mt-1.5 !text-tertiary-w">{s.label}</p>
+              </div>
+              {i < stats.length - 1 && (
+                <div className="hidden sm:block w-px h-10 bg-white/10" />
+              )}
             </div>
           ))}
         </div>
@@ -346,13 +378,13 @@ function Schedule() {
         <div className="grid md:grid-cols-3 gap-5">
           <InfoCard
             label="Funções"
-            value="Quarta a domingo"
-            sub="2 sessões por noite · consulte disponibilidade"
+            value="Seg – Sáb"
+            sub="18h e 20h · sex–sáb também às 19h"
           />
-          <InfoCard label="Duração" value="≈ 1h 30min" sub="Sem intervalo" />
+          <InfoCard label="Duração" value="1 hora" sub="Sem intervalo" />
           <InfoCard
             label="Endereço"
-            value="Av. de Mayo 825"
+            value="Av. de Mayo 829"
             sub="Buenos Aires · Argentina"
           />
         </div>
@@ -367,7 +399,7 @@ function Schedule() {
               <li>· Táxis e Uber até a porta · zona segura à noite</li>
             </ul>
             <a
-              href="https://maps.google.com/?q=Caf%C3%A9+Tortoni+Av.+de+Mayo+825+Buenos+Aires"
+              href="https://maps.google.com/?q=Caf%C3%A9+Tortoni+Av.+de+Mayo+829+Buenos+Aires"
               target="_blank"
               rel="noopener"
               className="btn btn-tertiary mt-4"
@@ -642,7 +674,7 @@ function Footer() {
         <div>
           <p className="eyebrow mb-3">Local</p>
           <p className="text-secondary-w">Café Tortoni</p>
-          <p className="text-tertiary-w text-sm">Av. de Mayo 825 — Buenos Aires, Argentina</p>
+          <p className="text-tertiary-w text-sm">Av. de Mayo 829 — Buenos Aires, Argentina</p>
         </div>
         <div>
           <p className="eyebrow mb-3">Reservas</p>
@@ -676,6 +708,7 @@ function TangoLandingPT() {
       <main>
         <Hero />
         <QuickAnswers />
+        <SocialProof />
         <WhyTortoni />
         <TheShow />
         <Schedule />
