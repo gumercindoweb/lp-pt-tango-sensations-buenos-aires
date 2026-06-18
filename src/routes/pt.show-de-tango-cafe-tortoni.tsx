@@ -6,7 +6,7 @@ import bandoneonImg from "@/assets/bandoneon.jpg";
 import coupleImg from "@/assets/tango-couple.jpg";
 import logoImg from "@/assets/logo.webp";
 
-const WHATSAPP_URL = "https://wa.me/5491100000000?text=Ol%C3%A1%21%20Quero%20reservar%20o%20show%20de%20tango%20no%20Caf%C3%A9%20Tortoni.";
+const WHATSAPP_URL = "https://wa.me/5491150108040?text=%5BLP-PT-SST%5D%20Ol%C3%A1!%20Quero%20reservar%20o%20show%20de%20tango%20no%20Caf%C3%A9%20Tortoni.";
 const ROUTE_PATH = "/pt/show-de-tango-cafe-tortoni";
 const CANONICAL_URL = "https://sensacionesdetango.com/pt/show-de-tango-cafe-tortoni";
 
@@ -114,12 +114,12 @@ export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
 function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-noir/70 border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-5 lg:px-10 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-5 lg:px-10 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center group">
           <img
             src={logoImg}
             alt="Sensaciones de Tango"
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.22em] font-semibold text-secondary-w">
@@ -662,10 +662,11 @@ function Footer() {
     <footer className="bg-ink border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-5 lg:px-10 grid sm:grid-cols-3 gap-8">
         <div>
-          <div className="flex items-baseline gap-2">
-            <span className="display-caps text-primary-w tracking-[0.18em]">Sensaciones</span>
-            <span className="font-script text-ambar text-xl -ml-1">de tango</span>
-          </div>
+          <img
+            src={logoImg}
+            alt="Sensaciones de Tango"
+            className="h-24 w-auto"
+          />
           <p className="text-tertiary-w text-sm mt-3 max-w-xs">
             Experiência teatral com tango ao vivo no histórico Café Tortoni,
             em Buenos Aires.
