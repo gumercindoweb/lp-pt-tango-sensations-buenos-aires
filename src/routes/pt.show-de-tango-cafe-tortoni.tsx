@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero-show.jpg";
 import tortoniImg from "@/assets/tortoni-interior.jpg";
-import bandoneonImg from "@/assets/bandoneon.jpg";
+import bandoneonImg from "@/assets/show-singer.jpg";
 import coupleImg from "@/assets/tango-couple.jpg";
 import logoImg from "@/assets/logo.webp";
 
