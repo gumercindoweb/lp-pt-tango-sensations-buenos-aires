@@ -4,6 +4,7 @@ import heroImg from "@/assets/tango-hero.jpg";
 import tortoniImg from "@/assets/tortoni-interior.jpg";
 import bandoneonImg from "@/assets/bandoneon.jpg";
 import coupleImg from "@/assets/tango-couple.jpg";
+import logoImg from "@/assets/logo.webp";
 
 const WHATSAPP_URL = "https://wa.me/5491100000000?text=Ol%C3%A1%21%20Quero%20reservar%20o%20show%20de%20tango%20no%20Caf%C3%A9%20Tortoni.";
 const ROUTE_PATH = "/pt/show-de-tango-cafe-tortoni";
@@ -12,7 +13,7 @@ const CANONICAL_URL = "https://sensacionesdetango.com/pt/show-de-tango-cafe-tort
 const FAQS = [
   {
     q: "Tem show de tango no Café Tortoni?",
-    a: "Sim. Sensaciones de Tango realiza um espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires, com bailarinos, bandoneón e cantor a poucos metros da sua mesa.",
+    a: "Sim. Sensaciones de Tango realiza um espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires — bailarinos, bandoneón e cantor a poucos metros da sua mesa.",
   },
   {
     q: "Como reservar o show de tango no Café Tortoni?",
@@ -54,7 +55,7 @@ export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
       {
         property: "og:description",
         content:
-          "Sensaciones de Tango: espetáculo ao vivo no Café Tortoni. Reserve sua mesa em português e viva o tango onde ele nasceu.",
+          "Sensaciones de Tango: experiência teatral com tango ao vivo no Café Tortoni. Reserve em português e viva o tango onde ele nasceu.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
@@ -114,13 +115,12 @@ function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-noir/70 border-b border-white/5">
       <div className="max-w-7xl mx-auto px-5 lg:px-10 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-baseline gap-2 group">
-          <span className="display-caps text-[1.05rem] tracking-[0.18em] text-primary-w">
-            Sensaciones
-          </span>
-          <span className="font-script text-ambar text-xl leading-none -ml-1">
-            de tango
-          </span>
+        <a href="#top" className="flex items-center group">
+          <img
+            src={logoImg}
+            alt="Sensaciones de Tango"
+            className="h-12 w-auto"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.22em] font-semibold text-secondary-w">
           <a href="#show" className="hover:text-ambar transition-colors">Show</a>
@@ -315,9 +315,9 @@ function TheShow() {
     <section id="show" className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
         <div className="max-w-3xl mb-14">
-          <p className="eyebrow mb-4">O espetáculo</p>
+          <p className="eyebrow mb-4">A experiência</p>
           <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-6">
-            Sensaciones de Tango: o espetáculo realizado no Café Tortoni
+            Sensaciones de Tango: a experiência teatral com tango no Café Tortoni
           </h2>
           <p className="text-secondary-w text-lg max-w-2xl">
             Uma noite pensada para quem viaja a Buenos Aires e quer mais do que
@@ -667,8 +667,8 @@ function Footer() {
             <span className="font-script text-ambar text-xl -ml-1">de tango</span>
           </div>
           <p className="text-tertiary-w text-sm mt-3 max-w-xs">
-            Espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos
-            Aires.
+            Experiência teatral com tango ao vivo no histórico Café Tortoni,
+            em Buenos Aires.
           </p>
         </div>
         <div>

@@ -198,6 +198,7 @@
   .text-oro { color: var(--oro); }
   .text-wa { color: var(--wa); }
   .bg-noir { background-color: var(--noir); }
+  .bg-ink { background-color: var(--ink); }
   .bg-surface { background-color: var(--surface); }
   .bg-raised { background-color: var(--raised); }
   .bg-press { background-color: var(--press); }
