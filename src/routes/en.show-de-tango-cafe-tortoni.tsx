@@ -7,6 +7,7 @@ import coupleImg from "@/assets/tango-couple.jpg";
 import logoImg from "@/assets/logo.webp";
 
 const WHATSAPP_URL = "https://wa.me/5491150108040?text=%5BLP-EN-SST%5D%20Hello!%20I%20want%20to%20book%20the%20tango%20show%20at%20Caf%C3%A9%20Tortoni.";
+const TICKETS_URL = "https://tickets.sensacionesdetango.com/";
 const ROUTE_PATH = "/en/show-de-tango-cafe-tortoni";
 const CANONICAL_URL = "https://sensacionesdetango.com/en/show-de-tango-cafe-tortoni";
 
@@ -143,8 +144,8 @@ function Nav() {
             <span className="text-white/20">·</span>
             <a href="/es/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">ES</a>
           </div>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa !py-2.5 !px-4 text-sm">
-            <WhatsAppIcon className="w-4 h-4" /> Book
+          <a href={TICKETS_URL} target="_blank" rel="noopener" className="btn btn-primary !py-2.5 !px-4 text-sm">
+            Buy ticket
           </a>
         </div>
 
@@ -175,15 +176,22 @@ function Nav() {
             <a href="#reviews" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Reviews</a>
             <a href="#faq" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">FAQ</a>
           </nav>
-          <div className="border-t border-white/5 pt-4 flex items-center justify-between">
+          <div className="border-t border-white/5 pt-4 flex flex-col gap-3">
+            <div className="flex gap-2">
+              <a href={TICKETS_URL} target="_blank" rel="noopener" className="btn btn-primary flex-1 !py-2.5 text-sm">
+                Buy ticket
+              </a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa flex-1 !py-2.5 text-sm">
+                <WhatsAppIcon className="w-4 h-4" /> Book
+              </a>
+            </div>
             <div className="flex items-center gap-1 text-[0.72rem] uppercase tracking-[0.22em] font-semibold">
               <a href="/pt/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">PT</a>
               <span className="text-white/20">·</span>
               <span className="text-ambar px-1">EN</span>
+              <span className="text-white/20">·</span>
+              <a href="/es/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">ES</a>
             </div>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa !py-2.5 !px-4 text-sm">
-              <WhatsAppIcon className="w-4 h-4" /> Book
-            </a>
           </div>
         </div>
       )}
@@ -227,6 +235,9 @@ function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mt-9">
+            <a href={TICKETS_URL} target="_blank" rel="noopener" className="btn btn-primary">
+              Buy ticket
+            </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
               <WhatsAppIcon className="w-5 h-5" />
               Book via WhatsApp
@@ -472,6 +483,9 @@ function Schedule() {
               for your chosen date within minutes.
             </p>
             <div className="flex flex-wrap gap-3">
+              <a href={TICKETS_URL} target="_blank" rel="noopener" className="btn btn-primary">
+                Buy ticket
+              </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
                 <WhatsAppIcon className="w-5 h-5" /> Book now
               </a>
@@ -696,6 +710,9 @@ function FinalCTA() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
+          <a href={TICKETS_URL} target="_blank" rel="noopener" className="btn btn-primary">
+            Buy ticket
+          </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
             <WhatsAppIcon className="w-5 h-5" />
             Book via WhatsApp
