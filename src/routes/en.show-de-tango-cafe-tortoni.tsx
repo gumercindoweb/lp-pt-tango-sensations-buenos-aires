@@ -40,6 +40,10 @@ const FAQS = [
     q: "Does the show include dinner?",
     a: "The show does not include dinner. You can order from the café before the performance. Payment is made in cash on-site.",
   },
+  {
+    q: "Are tickets refundable?",
+    a: "No. Tickets purchased through this platform are non-refundable and cannot be modified after purchase. Please confirm your availability for the selected date and time before completing your purchase.",
+  },
 ];
 
 export const Route = createFileRoute("/en/show-de-tango-cafe-tortoni")({
@@ -482,6 +486,13 @@ function Schedule() {
             </div>
           </div>
         </div>
+
+        <div className="mt-5 card-tango">
+          <p className="eyebrow mb-3">Two spaces at Café Tortoni</p>
+          <p className="text-secondary-w leading-relaxed">
+            The <strong className="text-primary-w">6 pm and 8 pm</strong> performances take place in the <strong className="text-primary-w">historic wine cellar in the basement</strong> — an intimate period space, accessed by stairs. The <strong className="text-primary-w">7 pm</strong> performance (Fridays and Saturdays) takes place in the <strong className="text-primary-w">main hall</strong> at street level — the only space <span className="text-ambar">♿ suitable for guests with reduced mobility</span>.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -672,48 +683,6 @@ function FAQSection() {
   );
 }
 
-function VenueAndPolicy() {
-  return (
-    <section className="relative py-16 lg:py-20 bg-surface border-t border-white/5">
-      <div className="max-w-5xl mx-auto px-5 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-5">
-          <div className="card-tango">
-            <p className="eyebrow mb-4">Rooms & accessibility</p>
-            <ul className="space-y-5 text-secondary-w">
-              <li className="flex gap-3">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
-                <div>
-                  <p><strong className="text-primary-w">6 pm & 8 pm</strong> — historic wine cellar in the basement of Café Tortoni. An intimate, period space with the building's original character.</p>
-                  <span className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-tertiary-w">
-                    ↓ Staircase access only
-                  </span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
-                <div>
-                  <p><strong className="text-primary-w">7 pm · Fri–Sat</strong> — main hall. The only performance suitable for guests with reduced mobility.</p>
-                  <span
-                    className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-ambar cursor-default"
-                    title="Suitable for guests with reduced mobility"
-                  >
-                    ♿ Accessible · reduced mobility
-                  </span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="card-tango border-bordo">
-            <p className="eyebrow mb-4">Ticket policy</p>
-            <p className="text-secondary-w leading-relaxed">
-              Tickets purchased through this platform are non-refundable and cannot be modified after purchase. Please confirm your availability for the selected date and time before completing your purchase.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function FinalCTA() {
   return (
@@ -817,7 +786,6 @@ function TangoLandingEN() {
         <DayAndNight />
         <Reviews />
         <FAQSection />
-        <VenueAndPolicy />
         <FinalCTA />
       </main>
       <Footer />

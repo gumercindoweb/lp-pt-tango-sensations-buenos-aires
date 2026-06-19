@@ -40,6 +40,10 @@ const FAQS = [
     q: "O show inclui jantar?",
     a: "O show não inclui jantar. É possível consumir no café antes do espetáculo. O pagamento é feito em dinheiro no local.",
   },
+  {
+    q: "Os ingressos são reembolsáveis?",
+    a: "Não. Os ingressos adquiridos por esta plataforma não são reembolsáveis nem admitem alterações após a compra. Confirme sua disponibilidade para a data e o horário escolhidos antes de finalizar.",
+  },
 ];
 
 export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
@@ -482,6 +486,13 @@ function Schedule() {
             </div>
           </div>
         </div>
+
+        <div className="mt-5 card-tango">
+          <p className="eyebrow mb-3">Dois espaços do Café Tortoni</p>
+          <p className="text-secondary-w leading-relaxed">
+            As funções das <strong className="text-primary-w">18 h. e 20 h.</strong> são realizadas na <strong className="text-primary-w">adega histórica do subsolo</strong> — espaço íntimo de época, acesso por escada. A função das <strong className="text-primary-w">19 h.</strong> (sextas e sábados) é realizada no <strong className="text-primary-w">salão principal</strong> ao nível da rua — o único espaço <span className="text-ambar">♿ apto para pessoas com mobilidade reduzida</span>.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -672,48 +683,6 @@ function FAQSection() {
   );
 }
 
-function VenueAndPolicy() {
-  return (
-    <section className="relative py-16 lg:py-20 bg-surface border-t border-white/5">
-      <div className="max-w-5xl mx-auto px-5 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-5">
-          <div className="card-tango">
-            <p className="eyebrow mb-4">Salas e acessibilidade</p>
-            <ul className="space-y-5 text-secondary-w">
-              <li className="flex gap-3">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
-                <div>
-                  <p><strong className="text-primary-w">18 h. e 20 h.</strong> — adega histórica no subsolo do Café Tortoni. Espaço íntimo de época com o caráter original do edifício.</p>
-                  <span className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-tertiary-w">
-                    ↓ Acesso por escada
-                  </span>
-                </div>
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
-                <div>
-                  <p><strong className="text-primary-w">19 h. · sex–sáb</strong> — salão principal. Única função apta para pessoas com mobilidade reduzida.</p>
-                  <span
-                    className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-ambar cursor-default"
-                    title="Apta para pessoas com mobilidade reduzida"
-                  >
-                    ♿ Acessível · mobilidade reduzida
-                  </span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="card-tango border-bordo">
-            <p className="eyebrow mb-4">Política de ingressos</p>
-            <p className="text-secondary-w leading-relaxed">
-              Os ingressos adquiridos por esta plataforma não são reembolsáveis nem admitem alterações após a compra. Confirme sua disponibilidade para a data e o horário escolhidos antes de finalizar.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function FinalCTA() {
   return (
@@ -817,7 +786,6 @@ function TangoLandingPT() {
         <DayAndNight />
         <Reviews />
         <FAQSection />
-        <VenueAndPolicy />
         <FinalCTA />
       </main>
       <Footer />
