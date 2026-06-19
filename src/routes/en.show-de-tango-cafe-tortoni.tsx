@@ -508,12 +508,11 @@ function ForInternational() {
   return (
     <section className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-5xl mx-auto px-5 lg:px-10">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-2xl">🌍</span>
-          <p className="eyebrow !text-ambar">For international visitors</p>
+        <div className="mb-4">
+          <p className="eyebrow !text-ambar">For those traveling to Buenos Aires</p>
         </div>
         <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-10">
-          Information for international visitors
+          Information for those traveling to Buenos Aires
         </h2>
         <div className="divide-y divide-white/5 border-y border-white/5">
           {rows.map((r) => (
@@ -673,6 +672,49 @@ function FAQSection() {
   );
 }
 
+function VenueAndPolicy() {
+  return (
+    <section className="relative py-16 lg:py-20 bg-surface border-t border-white/5">
+      <div className="max-w-5xl mx-auto px-5 lg:px-10">
+        <div className="grid lg:grid-cols-2 gap-5">
+          <div className="card-tango">
+            <p className="eyebrow mb-4">Rooms & accessibility</p>
+            <ul className="space-y-5 text-secondary-w">
+              <li className="flex gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
+                <div>
+                  <p><strong className="text-primary-w">6 pm & 8 pm</strong> — historic wine cellar in the basement of Café Tortoni. An intimate, period space with the building's original character.</p>
+                  <span className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-tertiary-w">
+                    ↓ Staircase access only
+                  </span>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
+                <div>
+                  <p><strong className="text-primary-w">7 pm · Fri–Sat</strong> — main hall. The only performance suitable for guests with reduced mobility.</p>
+                  <span
+                    className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-ambar cursor-default"
+                    title="Suitable for guests with reduced mobility"
+                  >
+                    ♿ Accessible · reduced mobility
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="card-tango border-bordo">
+            <p className="eyebrow mb-4">Ticket policy</p>
+            <p className="text-secondary-w leading-relaxed">
+              Tickets purchased through this platform are non-refundable and cannot be modified after purchase. Please confirm your availability for the selected date and time before completing your purchase.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FinalCTA() {
   return (
     <section className="relative py-28 lg:py-36 overflow-hidden">
@@ -775,6 +817,7 @@ function TangoLandingEN() {
         <DayAndNight />
         <Reviews />
         <FAQSection />
+        <VenueAndPolicy />
         <FinalCTA />
       </main>
       <Footer />

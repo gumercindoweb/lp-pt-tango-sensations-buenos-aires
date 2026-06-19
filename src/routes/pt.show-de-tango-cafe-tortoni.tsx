@@ -508,12 +508,11 @@ function ForBrazilians() {
   return (
     <section className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-5xl mx-auto px-5 lg:px-10">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-2xl">🇧🇷</span>
-          <p className="eyebrow !text-ambar">Para turistas brasileiros</p>
+        <div className="mb-4">
+          <p className="eyebrow !text-ambar">Para quem viaja a Buenos Aires</p>
         </div>
         <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-10">
-          Informações para turistas brasileiros
+          Informações para quem viaja a Buenos Aires
         </h2>
         <div className="divide-y divide-white/5 border-y border-white/5">
           {rows.map((r) => (
@@ -673,6 +672,49 @@ function FAQSection() {
   );
 }
 
+function VenueAndPolicy() {
+  return (
+    <section className="relative py-16 lg:py-20 bg-surface border-t border-white/5">
+      <div className="max-w-5xl mx-auto px-5 lg:px-10">
+        <div className="grid lg:grid-cols-2 gap-5">
+          <div className="card-tango">
+            <p className="eyebrow mb-4">Salas e acessibilidade</p>
+            <ul className="space-y-5 text-secondary-w">
+              <li className="flex gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
+                <div>
+                  <p><strong className="text-primary-w">18 h. e 20 h.</strong> — adega histórica no subsolo do Café Tortoni. Espaço íntimo de época com o caráter original do edifício.</p>
+                  <span className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-tertiary-w">
+                    ↓ Acesso por escada
+                  </span>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
+                <div>
+                  <p><strong className="text-primary-w">19 h. · sex–sáb</strong> — salão principal. Única função apta para pessoas com mobilidade reduzida.</p>
+                  <span
+                    className="inline-flex items-center gap-1.5 mt-2 text-[0.68rem] uppercase tracking-[0.18em] text-ambar cursor-default"
+                    title="Apta para pessoas com mobilidade reduzida"
+                  >
+                    ♿ Acessível · mobilidade reduzida
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="card-tango border-bordo">
+            <p className="eyebrow mb-4">Política de ingressos</p>
+            <p className="text-secondary-w leading-relaxed">
+              Os ingressos adquiridos por esta plataforma não são reembolsáveis nem admitem alterações após a compra. Confirme sua disponibilidade para a data e o horário escolhidos antes de finalizar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FinalCTA() {
   return (
     <section className="relative py-28 lg:py-36 overflow-hidden">
@@ -775,6 +817,7 @@ function TangoLandingPT() {
         <DayAndNight />
         <Reviews />
         <FAQSection />
+        <VenueAndPolicy />
         <FinalCTA />
       </main>
       <Footer />
