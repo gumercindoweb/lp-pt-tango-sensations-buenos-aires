@@ -6,59 +6,59 @@ import bandoneonImg from "@/assets/show-singer.jpg";
 import coupleImg from "@/assets/tango-couple.jpg";
 import logoImg from "@/assets/logo.webp";
 
-const WHATSAPP_URL = "https://wa.me/5491150108040?text=%5BLP-PT-SST%5D%20Ol%C3%A1!%20Quero%20reservar%20o%20show%20de%20tango%20no%20Caf%C3%A9%20Tortoni.";
-const ROUTE_PATH = "/pt/show-de-tango-cafe-tortoni";
-const CANONICAL_URL = "https://sensacionesdetango.com/pt/show-de-tango-cafe-tortoni";
+const WHATSAPP_URL = "https://wa.me/5491150108040?text=%5BLP-EN-SST%5D%20Hello!%20I%20want%20to%20book%20the%20tango%20show%20at%20Caf%C3%A9%20Tortoni.";
+const ROUTE_PATH = "/en/show-de-tango-cafe-tortoni";
+const CANONICAL_URL = "https://sensacionesdetango.com/en/show-de-tango-cafe-tortoni";
 
 const FAQS = [
   {
-    q: "Tem show de tango no Café Tortoni?",
-    a: "Sim. Sensaciones de Tango realiza um espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires — bailarinos, bandoneón e cantor a poucos metros da sua mesa.",
+    q: "Is there a tango show at Café Tortoni?",
+    a: "Yes. Sensaciones de Tango presents a live tango theatrical experience at the historic Café Tortoni in Buenos Aires — dancers, bandoneón and singer just meters from your table.",
   },
   {
-    q: "Como reservar o show de tango no Café Tortoni?",
-    a: "A reserva é feita pelo WhatsApp ou pelo formulário desta página. Atendemos turistas brasileiros em português e confirmamos sua mesa em poucos minutos.",
+    q: "How do I book the tango show at Café Tortoni?",
+    a: "Via WhatsApp or the form on this page. We serve international visitors in English and confirm your table within minutes.",
   },
   {
-    q: "Quanto custa um show de tango em Buenos Aires?",
-    a: "Os valores variam conforme a função e a localização da mesa. Consulte disponibilidade e preços atualizados pelo WhatsApp — respondemos no mesmo dia.",
+    q: "How much does a tango show in Buenos Aires cost?",
+    a: "Prices vary by session and table location. Check availability and current prices via WhatsApp — we reply the same day.",
   },
   {
-    q: "O Café Tortoni fica perto do Obelisco?",
-    a: "Sim. O Café Tortoni está na Avenida de Mayo 829, no coração histórico de Buenos Aires, a poucos minutos a pé do Obelisco, Plaza de Mayo e Avenida Corrientes.",
+    q: "Is Café Tortoni near the Obelisco?",
+    a: "Yes. Café Tortoni is at Avenida de Mayo 829, in the historic heart of Buenos Aires, a short walk from the Obelisco, Plaza de Mayo and Avenida Corrientes.",
   },
   {
-    q: "O show é recomendado para brasileiros?",
-    a: "Totalmente. É uma das experiências mais procuradas por turistas brasileiros que visitam Buenos Aires pela primeira vez: une história, cultura portenha e tango autêntico em um só lugar.",
+    q: "Is the show suitable for international visitors?",
+    a: "Absolutely. It's one of the most sought-after experiences by first-time visitors to Buenos Aires: history, Argentine culture and authentic tango all in one evening.",
   },
   {
-    q: "Preciso reservar com antecedência?",
-    a: "Sim. As funções têm lugares limitados e costumam esgotar em alta temporada. Recomendamos reservar antes da viagem para garantir sua mesa.",
+    q: "Do I need to book in advance?",
+    a: "Yes. Sessions have limited seats and often sell out in peak season. We recommend booking before your trip to secure your table.",
   },
   {
-    q: "O show inclui jantar?",
-    a: "O show não inclui jantar. É possível consumir no café antes do espetáculo. O pagamento é feito em dinheiro no local.",
+    q: "Does the show include dinner?",
+    a: "The show does not include dinner. You can order from the café before the performance. Payment is made in cash on-site.",
   },
 ];
 
-export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
+export const Route = createFileRoute("/en/show-de-tango-cafe-tortoni")({
   head: () => ({
     meta: [
-      { title: "Show de Tango no Café Tortoni em Buenos Aires — Sensaciones de Tango" },
+      { title: "Tango Show at Café Tortoni Buenos Aires — Sensaciones de Tango" },
       {
         name: "description",
         content:
-          "Viva uma noite de tango no histórico Café Tortoni, em Buenos Aires. Veja horários, localização, experiência e reserve seu show com Sensaciones de Tango.",
+          "Experience live tango at the historic Café Tortoni in Buenos Aires. See schedules, book your show and live an authentic Buenos Aires night with Sensaciones de Tango.",
       },
-      { name: "language", content: "pt-BR" },
-      { property: "og:title", content: "Show de Tango no Café Tortoni em Buenos Aires" },
+      { name: "language", content: "en" },
+      { property: "og:title", content: "Tango Show at Café Tortoni Buenos Aires — Sensaciones de Tango" },
       {
         property: "og:description",
         content:
-          "Sensaciones de Tango: experiência teatral com tango ao vivo no Café Tortoni. Reserve em português e viva o tango onde ele nasceu.",
+          "Sensaciones de Tango: tango theatrical experience at the historic Café Tortoni. Book in English and live tango where it was born.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:locale", content: "pt_BR" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:url", content: CANONICAL_URL },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
@@ -87,9 +87,9 @@ export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Event",
-          name: "Show de Tango no Café Tortoni — Sensaciones de Tango",
+          name: "Tango Show at Café Tortoni — Sensaciones de Tango",
           description:
-            "Espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires.",
+            "Live tango theatrical experience at the historic Café Tortoni in Buenos Aires.",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           location: {
@@ -111,7 +111,7 @@ export const Route = createFileRoute("/pt/show-de-tango-cafe-tortoni")({
       },
     ],
   }),
-  component: TangoLandingPT,
+  component: TangoLandingEN,
 });
 
 /* ---------- Components ---------- */
@@ -129,18 +129,18 @@ function Nav() {
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.22em] font-semibold text-secondary-w">
           <a href="#show" className="hover:text-ambar transition-colors">Show</a>
-          <a href="#horarios" className="hover:text-ambar transition-colors">Horários</a>
-          <a href="#reseñas" className="hover:text-ambar transition-colors">Reseñas</a>
+          <a href="#schedules" className="hover:text-ambar transition-colors">Schedules</a>
+          <a href="#reviews" className="hover:text-ambar transition-colors">Reviews</a>
           <a href="#faq" className="hover:text-ambar transition-colors">FAQ</a>
         </nav>
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-1 text-[0.72rem] uppercase tracking-[0.22em] font-semibold">
-            <span className="text-ambar px-1">PT</span>
+            <a href="/pt/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">PT</a>
             <span className="text-white/20">·</span>
-            <a href="/en/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">EN</a>
+            <span className="text-ambar px-1">EN</span>
           </div>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa !py-2.5 !px-4 text-sm">
-            <WhatsAppIcon className="w-4 h-4" /> Reservar
+            <WhatsAppIcon className="w-4 h-4" /> Book
           </a>
         </div>
       </div>
@@ -153,7 +153,7 @@ function Hero() {
     <section id="top" className="relative min-h-[100svh] flex items-end overflow-hidden">
       <img
         src={heroImg}
-        alt="Casal dançando tango no Café Tortoni"
+        alt="Tango couple dancing at Café Tortoni"
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}
         height={1100}
@@ -164,40 +164,40 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto px-5 lg:px-10 pb-20 lg:pb-28 pt-32 w-full">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
-            <span className="badge badge-available">Disponível esta semana</span>
+            <span className="badge badge-available">Available this week</span>
             <span className="eyebrow !text-text-tertiary">Buenos Aires · 1858</span>
           </div>
 
           <h1 className="display-caps text-[2.4rem] sm:text-[3.2rem] lg:text-[4.4rem] leading-[0.98] text-primary-w mb-3">
-            Show de Tango
+            Tango Show
             <br />
-            <span className="text-ambar">no Café Tortoni</span>
+            <span className="text-ambar">at Café Tortoni</span>
             <br />
             <span className="font-script normal-case tracking-normal text-[0.55em] text-secondary-w">
-              em Buenos Aires
+              in Buenos Aires
             </span>
           </h1>
 
           <p className="font-display italic text-xl sm:text-2xl text-secondary-w max-w-2xl mt-6 leading-snug">
-            Viva uma noite íntima de tango no café mais histórico da Argentina —
-            bailarinos, bandoneón e voz, a poucos metros da sua mesa.
+            An intimate tango night at Argentina's most historic café —
+            dancers, bandoneón and live vocals, just meters from your table.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mt-9">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
               <WhatsAppIcon className="w-5 h-5" />
-              Reservar pelo WhatsApp
+              Book via WhatsApp
             </a>
-            <a href="#horarios" className="btn btn-secondary">
-              Ver horários disponíveis
+            <a href="#schedules" className="btn btn-secondary">
+              See available schedules
             </a>
           </div>
 
           <ul className="flex flex-wrap gap-x-8 gap-y-2 mt-10 text-[0.78rem] uppercase tracking-[0.22em] font-semibold text-tertiary-w">
             <li>· Av. de Mayo 829</li>
-            <li>· 1h de espetáculo</li>
-            <li>· Atendimento em PT/ES</li>
-            <li>· Lugares limitados</li>
+            <li>· 1h show</li>
+            <li>· Service in EN/ES</li>
+            <li>· Limited seats</li>
           </ul>
         </div>
       </div>
@@ -207,17 +207,17 @@ function Hero() {
 
 function QuickAnswers() {
   const items = [
-    { q: "Tem show de tango no Café Tortoni?", a: "Sim — Sensaciones de Tango se apresenta no Café Tortoni." },
-    { q: "Onde fica?", a: "No centro histórico de Buenos Aires, perto do Obelisco." },
-    { q: "Precisa reservar?", a: "Sim, lugares limitados — recomendamos reservar antes." },
-    { q: "É bom para brasileiros?", a: "Ideal para a primeira viagem a Buenos Aires." },
+    { q: "Is there a tango show at Café Tortoni?", a: "Yes — Sensaciones de Tango performs at Café Tortoni." },
+    { q: "Where is it?", a: "In the historic center of Buenos Aires, near the Obelisco." },
+    { q: "Is booking required?", a: "Yes, seats are limited — we recommend booking ahead." },
+    { q: "Good for international visitors?", a: "Ideal for a first evening in Buenos Aires." },
   ];
   return (
     <section className="relative py-16 lg:py-24 bg-noir border-y border-white/5">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
-        <p className="eyebrow mb-3">Respostas rápidas</p>
+        <p className="eyebrow mb-3">Quick answers</p>
         <h2 className="display-caps text-2xl sm:text-3xl text-primary-w mb-10 max-w-2xl">
-          O que você precisa saber em 30 segundos
+          What you need to know in 30 seconds
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((it) => (
@@ -235,8 +235,8 @@ function QuickAnswers() {
 function SocialProof() {
   const stats = [
     { value: "4.9", unit: "/5", label: "TripAdvisor" },
-    { value: "#3", unit: "", label: "em Buenos Aires" },
-    { value: "93.6%", unit: "", label: "Excelente" },
+    { value: "#3", unit: "", label: "in Buenos Aires" },
+    { value: "93.6%", unit: "", label: "Excellent" },
     { value: "2026", unit: "", label: "Travellers' Choice" },
   ];
   return (
@@ -272,7 +272,7 @@ function WhyTortoni() {
           <div className="absolute -inset-4 bg-amber-rim opacity-20 blur-2xl" />
           <img
             src={tortoniImg}
-            alt="Interior histórico do Café Tortoni em Buenos Aires"
+            alt="Historic interior of Café Tortoni in Buenos Aires"
             className="relative rounded-md w-full h-auto shadow-elev-3"
             loading="lazy"
             width={1024}
@@ -280,29 +280,29 @@ function WhyTortoni() {
           />
         </div>
         <div>
-          <p className="eyebrow mb-4">Café Tortoni · desde 1858</p>
+          <p className="eyebrow mb-4">Café Tortoni · since 1858</p>
           <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-6">
-            Por que assistir a um show de tango no Café Tortoni?
+            Why watch a tango show at Café Tortoni?
           </h2>
           <div className="space-y-5 text-secondary-w text-[1.02rem] leading-relaxed">
             <p>
-              O Café Tortoni é o café mais antigo e emblemático da Argentina —
-              parada obrigatória de qualquer roteiro por Buenos Aires. Suas
-              colunas de mármore, vitrais Art Nouveau e luminárias de bronze
-              guardam a memória de Borges, Gardel e Alfonsina Storni.
+              Café Tortoni is Argentina's oldest and most iconic café —
+              a landmark on every Buenos Aires itinerary. Its marble
+              columns, Art Nouveau stained glass and bronze fixtures have
+              witnessed Borges, Gardel and Alfonsina Storni.
             </p>
             <p>
-              Ver tango neste salão não é apenas assistir a um espetáculo: é
-              entrar na história do gênero, no lugar onde ele se firmou como a
-              alma musical da cidade.
+              Watching tango here is more than attending a performance: it's
+              stepping into the history of the genre, in the very place where
+              it established itself as the city's musical soul.
             </p>
           </div>
           <ul className="mt-8 space-y-3 text-secondary-w">
             {[
-              "Café histórico no coração de Buenos Aires",
-              "Experiência cultural argentina autêntica",
-              "Show de tango em um espaço ícone do circuito turístico",
-              "Ideal para turistas brasileiros em sua primeira visita",
+              "Historic café in the heart of Buenos Aires",
+              "Authentic Argentine cultural experience",
+              "Tango theatrical experience in an iconic venue",
+              "Ideal for international visitors on their first trip",
             ].map((t) => (
               <li key={t} className="flex gap-3">
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-ambar shrink-0" />
@@ -318,23 +318,23 @@ function WhyTortoni() {
 
 function TheShow() {
   const elements = [
-    { t: "Dança", d: "Casais de tango ao vivo em estilo tradicional argentino." },
-    { t: "Música", d: "Bandoneón, piano e violino interpretando os clássicos do gênero." },
-    { t: "Voz", d: "Cantores portenhos interpretando Gardel, Piazzolla e contemporâneos." },
-    { t: "Cenário", d: "O salão histórico do Café Tortoni como palco íntimo." },
+    { t: "Dance", d: "Live tango couples performing in traditional Argentine style." },
+    { t: "Music", d: "Bandoneón, piano and violin interpreting the genre's classics." },
+    { t: "Voice", d: "Buenos Aires singers performing Gardel, Piazzolla and contemporary tango." },
+    { t: "Setting", d: "The historic Café Tortoni hall as an intimate stage." },
   ];
   return (
     <section id="show" className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
         <div className="max-w-3xl mb-14">
-          <p className="eyebrow mb-4">A experiência</p>
+          <p className="eyebrow mb-4">The experience</p>
           <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-6">
-            Sensaciones de Tango: a experiência teatral com tango no Café Tortoni
+            Sensaciones de Tango: tango theatrical experience at Café Tortoni
           </h2>
           <p className="text-secondary-w text-lg max-w-2xl">
-            Uma noite pensada para quem viaja a Buenos Aires e quer mais do que
-            uma foto na fachada: música ao vivo, dança no chão de madeira, voz
-            e bandoneón a centímetros do público.
+            An evening designed for visitors who want more than a photo on the
+            facade: live music, dance on wooden floors, voice and bandoneón
+            centimeters from the audience.
           </p>
         </div>
 
@@ -342,7 +342,7 @@ function TheShow() {
           <div className="lg:col-span-2 relative rounded-lg overflow-hidden">
             <img
               src={bandoneonImg}
-              alt="Bandoneonista tocando ao vivo em show de tango"
+              alt="Bandoneón player performing live at the tango show"
               className="w-full h-full object-cover min-h-[420px]"
               loading="lazy"
               width={1200}
@@ -350,9 +350,9 @@ function TheShow() {
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-noir/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <span className="badge badge-available">Ao vivo</span>
+              <span className="badge badge-available">Live</span>
               <p className="font-display text-2xl mt-3 text-primary-w">
-                Voz, dança e bandoneón
+                Voice, dance and bandoneón
               </p>
             </div>
           </div>
@@ -365,10 +365,10 @@ function TheShow() {
               </div>
             ))}
             <div className="card-tango sm:col-span-2 border-bordo">
-              <p className="display-caps text-sm text-ambar mb-2">Mesas compartilhadas</p>
+              <p className="display-caps text-sm text-ambar mb-2">Shared tables</p>
               <p className="text-secondary-w">
-                Atribuição por ordem de pagamento. Para mesa individual, você
-                paga as 4 localizações. Tudo confirmado por escrito.
+                Assigned by order of payment. For a private table, you pay
+                for all 4 seats. Everything confirmed in writing.
               </p>
             </div>
           </div>
@@ -380,22 +380,22 @@ function TheShow() {
 
 function Schedule() {
   return (
-    <section id="horarios" className="relative py-24 lg:py-32">
+    <section id="schedules" className="relative py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
-        <p className="eyebrow mb-3">Funções</p>
+        <p className="eyebrow mb-3">Sessions</p>
         <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-12 max-w-3xl">
-          Horários, duração e localização do show
+          Schedules, duration and location
         </h2>
 
         <div className="grid md:grid-cols-3 gap-5">
           <InfoCard
-            label="Funções"
-            value="Seg – Sáb"
-            sub="18h e 20h · sex–sáb também às 19h"
+            label="Sessions"
+            value="Mon – Sat"
+            sub="6pm and 8pm · Fri–Sat also at 7pm"
           />
-          <InfoCard label="Duração" value="1 hora" sub="Sem intervalo" />
+          <InfoCard label="Duration" value="1 hour" sub="No intermission" />
           <InfoCard
-            label="Endereço"
+            label="Address"
             value="Av. de Mayo 829"
             sub="Buenos Aires · Argentina"
           />
@@ -403,12 +403,12 @@ function Schedule() {
 
         <div className="mt-10 grid lg:grid-cols-2 gap-5">
           <div className="card-tango">
-            <p className="eyebrow mb-4">Como chegar</p>
+            <p className="eyebrow mb-4">How to get there</p>
             <ul className="space-y-3 text-secondary-w">
-              <li>· A 4 quadras do <strong className="text-primary-w">Obelisco</strong></li>
-              <li>· A 3 quadras da <strong className="text-primary-w">Plaza de Mayo</strong></li>
-              <li>· Metrô Linha A — estação <strong className="text-primary-w">Piedras</strong></li>
-              <li>· Táxis e Uber até a porta · zona segura à noite</li>
+              <li>· 4 blocks from the <strong className="text-primary-w">Obelisco</strong></li>
+              <li>· 3 blocks from <strong className="text-primary-w">Plaza de Mayo</strong></li>
+              <li>· Subway Line A — <strong className="text-primary-w">Piedras</strong> station</li>
+              <li>· Taxis and Uber to the door · safe area at night</li>
             </ul>
             <a
               href="https://maps.google.com/?q=Caf%C3%A9+Tortoni+Av.+de+Mayo+829+Buenos+Aires"
@@ -416,23 +416,23 @@ function Schedule() {
               rel="noopener"
               className="btn btn-tertiary mt-4"
             >
-              Abrir no Google Maps →
+              Open in Google Maps →
             </a>
           </div>
           <div className="card-tango bg-raised">
-            <p className="eyebrow mb-4">Reserve sua noite</p>
+            <p className="eyebrow mb-4">Reserve your evening</p>
             <p className="font-display text-2xl text-primary-w mb-3">
-              Garanta sua mesa com antecedência
+              Secure your table in advance
             </p>
             <p className="text-secondary-w mb-6">
-              Atendimento em português pelo WhatsApp. Confirmamos em poucos
-              minutos a disponibilidade da data escolhida.
+              Service in English via WhatsApp. We confirm availability
+              for your chosen date within minutes.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
-                <WhatsAppIcon className="w-5 h-5" /> Reservar agora
+                <WhatsAppIcon className="w-5 h-5" /> Book now
               </a>
-              <span className="badge badge-few">Últimos lugares · sáb</span>
+              <span className="badge badge-few">Few seats · Sat</span>
             </div>
           </div>
         </div>
@@ -451,23 +451,23 @@ function InfoCard({ label, value, sub }: { label: string; value: string; sub: st
   );
 }
 
-function ForBrazilians() {
+function ForInternational() {
   const rows = [
-    { q: "Posso reservar do Brasil?", a: "Sim — pelo WhatsApp ou pelo formulário, antes mesmo de viajar." },
-    { q: "Atendem em português?", a: "Sim. Nossa equipe atende turistas brasileiros em português durante toda a reserva." },
-    { q: "É perto de zonas turísticas?", a: "Sim. Está na Avenida de Mayo, eixo histórico ligando Plaza de Mayo ao Congresso." },
-    { q: "Vale reservar antes da viagem?", a: "Sim. Em alta temporada as funções esgotam — reserve com pelo menos 7 dias de antecedência." },
-    { q: "É boa experiência para primeira visita?", a: "É uma das melhores: une Café Tortoni, tango ao vivo e cultura portenha em uma noite." },
+    { q: "Can I book from abroad?", a: "Yes — via WhatsApp or the form on this page, before you even travel." },
+    { q: "Is service available in English?", a: "Yes. Our team serves international visitors in English throughout the booking process." },
+    { q: "Is it near tourist areas?", a: "Yes. Café Tortoni is on Avenida de Mayo, the historic axis linking Plaza de Mayo to the Congress building." },
+    { q: "Worth booking before the trip?", a: "Yes. During peak season sessions sell out — we recommend booking at least 7 days in advance." },
+    { q: "Good experience for a first visit?", a: "One of the best: Café Tortoni, live tango and Argentine culture all in one evening." },
   ];
   return (
     <section className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-5xl mx-auto px-5 lg:px-10">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-2xl">🇧🇷</span>
-          <p className="eyebrow !text-ambar">Para turistas brasileiros</p>
+          <span className="text-2xl">🌍</span>
+          <p className="eyebrow !text-ambar">For international visitors</p>
         </div>
         <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-10">
-          Informações para turistas brasileiros
+          Information for international visitors
         </h2>
         <div className="divide-y divide-white/5 border-y border-white/5">
           {rows.map((r) => (
@@ -488,26 +488,26 @@ function DayAndNight() {
       <div className="absolute inset-0 bg-passion-glow opacity-30 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-5 lg:px-10 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
         <div>
-          <p className="eyebrow mb-4">Experiência completa</p>
+          <p className="eyebrow mb-4">The complete experience</p>
           <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-6">
-            Café Tortoni de dia, <span className="text-ambar">tango à noite</span>
+            Café Tortoni by day, <span className="text-ambar">tango at night</span>
           </h2>
           <p className="text-secondary-w text-lg mb-8 max-w-xl">
-            Muitos turistas conhecem o Tortoni de manhã, pelo café e pela
-            arquitetura. À noite, o mesmo salão se transforma em palco — e a
-            experiência se completa.
+            Many visitors discover Tortoni in the morning — the coffee, the
+            architecture. At night, the same room transforms into a stage —
+            and the experience is complete.
           </p>
 
           <div className="space-y-4">
             <Moment
-              label="Dia"
-              title="Visita ao café histórico"
-              text="Conheça o salão, sente nas mesmas mesas em que escritores e tangueiros sentaram. Café, churros e arquitetura."
+              label="Day"
+              title="Visit the historic café"
+              text="Explore the hall, sit at the same tables where writers and tango musicians once sat. Coffee, churros and architecture."
             />
             <Moment
-              label="Noite"
-              title="Show de tango ao vivo"
-              text="O mesmo espaço, agora com luz baixa, bandoneón e dança a poucos metros. Reserve com antecedência."
+              label="Night"
+              title="Live tango theatrical experience"
+              text="The same space, now dimly lit, with bandoneón and dance just meters away. Book in advance."
               highlight
             />
           </div>
@@ -517,7 +517,7 @@ function DayAndNight() {
           <div className="absolute -inset-6 bg-passion-glow opacity-60 blur-3xl" />
           <img
             src={coupleImg}
-            alt="Casal de tango se apresentando à noite no Café Tortoni"
+            alt="Tango couple performing at night at Café Tortoni"
             className="relative rounded-md w-full h-auto shadow-elev-3"
             loading="lazy"
             width={1200}
@@ -546,32 +546,32 @@ function Reviews() {
     {
       name: "Mariana S.",
       from: "São Paulo, BR",
-      text: "Inesquecível. O ambiente do Tortoni à noite é de outro mundo, e o show emocionou minha família inteira. Reservamos pelo WhatsApp em português, super fácil.",
+      text: "Unforgettable. Tortoni at night is something else — the show moved my whole family. We booked via WhatsApp in minutes.",
     },
     {
       name: "Diego R.",
       from: "Buenos Aires, AR",
-      text: "Llevé a unos amigos brasileños y quedaron fascinados. El nivel del show y la cercanía con los bailarines hacen la diferencia.",
+      text: "Brought international friends and they were blown away. The quality of the show and the closeness to the dancers make all the difference.",
     },
     {
       name: "Camila P.",
       from: "Rio de Janeiro, BR",
-      text: "A melhor noite da nossa viagem. Recomendo reservar antes — quando chegamos, estava lotado.",
+      text: "The best night of our trip. Book ahead — when we arrived, it was full.",
     },
   ];
   return (
-    <section id="reseñas" className="relative py-24 lg:py-32">
+    <section id="reviews" className="relative py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
-        <p className="eyebrow mb-3">Quem já viveu</p>
+        <p className="eyebrow mb-3">Those who lived it</p>
         <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-12 max-w-3xl">
-          O que dizem os visitantes
+          What visitors say
         </h2>
         <div className="grid md:grid-cols-3 gap-5">
           {reviews.map((r) => (
             <figure key={r.name} className="card-tango flex flex-col">
               <div className="text-ambar text-2xl mb-3" aria-hidden>★★★★★</div>
               <blockquote className="font-display italic text-lg text-primary-w leading-snug flex-1">
-                “{r.text}”
+                "{r.text}"
               </blockquote>
               <figcaption className="mt-5 pt-4 border-t border-white/5">
                 <p className="text-primary-w font-semibold">{r.name}</p>
@@ -590,9 +590,9 @@ function FAQSection() {
   return (
     <section id="faq" className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-4xl mx-auto px-5 lg:px-10">
-        <p className="eyebrow mb-3">Perguntas frequentes</p>
+        <p className="eyebrow mb-3">Frequently asked questions</p>
         <h2 className="display-caps text-3xl sm:text-4xl lg:text-5xl leading-[1.05] text-primary-w mb-10">
-          Tudo o que perguntam sobre o show
+          Everything people ask about the show
         </h2>
         <div className="border-t border-white/5">
           {FAQS.map((f, i) => {
@@ -642,27 +642,27 @@ function FinalCTA() {
 
       <div className="relative max-w-3xl mx-auto px-5 lg:px-10 text-center">
         <div className="ornate mb-6">
-          <span className="font-script text-2xl">a noite te espera</span>
+          <span className="font-script text-2xl">the night awaits</span>
         </div>
         <h2 className="display-caps text-3xl sm:text-5xl lg:text-6xl leading-[1] text-primary-w mb-6">
-          Reserve seu show de tango no Café Tortoni
+          Book your tango show at Café Tortoni
         </h2>
         <p className="font-display italic text-xl text-secondary-w mb-10">
-          Garanta seu lugar para viver uma noite de tango em Buenos Aires com
-          Sensaciones de Tango.
+          Secure your place for an unforgettable tango night in Buenos Aires
+          with Sensaciones de Tango.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
             <WhatsAppIcon className="w-5 h-5" />
-            Reservar pelo WhatsApp
+            Book via WhatsApp
           </a>
-          <a href="#horarios" className="btn btn-secondary">
-            Ver horários disponíveis
+          <a href="#schedules" className="btn btn-secondary">
+            See available schedules
           </a>
         </div>
         <p className="mt-6 text-tertiary-w text-sm uppercase tracking-[0.22em]">
-          Atendimento para turistas brasileiros
+          Service for international visitors
         </p>
       </div>
     </section>
@@ -680,25 +680,25 @@ function Footer() {
             className="h-24 w-auto"
           />
           <p className="text-tertiary-w text-sm mt-3 max-w-xs">
-            Experiência teatral com tango ao vivo no histórico Café Tortoni,
-            em Buenos Aires.
+            Tango theatrical experience at the historic Café Tortoni,
+            Buenos Aires.
           </p>
         </div>
         <div>
-          <p className="eyebrow mb-3">Local</p>
+          <p className="eyebrow mb-3">Venue</p>
           <p className="text-secondary-w">Café Tortoni</p>
           <p className="text-tertiary-w text-sm">Av. de Mayo 829 — Buenos Aires, Argentina</p>
         </div>
         <div>
-          <p className="eyebrow mb-3">Reservas</p>
+          <p className="eyebrow mb-3">Reservations</p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="text-wa hover:underline">
-            WhatsApp · atendimento em PT
+            WhatsApp · service in EN/ES
           </a>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-5 lg:px-10 mt-10 pt-6 border-t border-white/5 text-tertiary-w text-xs flex flex-wrap justify-between gap-3">
         <span>© {new Date().getFullYear()} Sensaciones de Tango</span>
-        <span>Buenos Aires · Mayo 2026</span>
+        <span>Buenos Aires · 2026</span>
       </div>
     </footer>
   );
@@ -714,7 +714,7 @@ function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
 
 /* ---------- Page ---------- */
 
-function TangoLandingPT() {
+function TangoLandingEN() {
   return (
     <div className="bg-noir text-primary-w">
       <Nav />
@@ -725,7 +725,7 @@ function TangoLandingPT() {
         <WhyTortoni />
         <TheShow />
         <Schedule />
-        <ForBrazilians />
+        <ForInternational />
         <DayAndNight />
         <Reviews />
         <FAQSection />

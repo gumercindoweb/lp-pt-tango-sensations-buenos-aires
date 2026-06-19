@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PtShowDeTangoCafeTortoniRouteImport } from './routes/pt.show-de-tango-cafe-tortoni'
+import { Route as EnShowDeTangoCafeTortoniRouteImport } from './routes/en.show-de-tango-cafe-tortoni'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,30 +24,47 @@ const PtShowDeTangoCafeTortoniRoute =
     path: '/pt/show-de-tango-cafe-tortoni',
     getParentRoute: () => rootRouteImport,
   } as any)
+const EnShowDeTangoCafeTortoniRoute =
+  EnShowDeTangoCafeTortoniRouteImport.update({
+    id: '/en/show-de-tango-cafe-tortoni',
+    path: '/en/show-de-tango-cafe-tortoni',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/en/show-de-tango-cafe-tortoni': typeof EnShowDeTangoCafeTortoniRoute
   '/pt/show-de-tango-cafe-tortoni': typeof PtShowDeTangoCafeTortoniRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/en/show-de-tango-cafe-tortoni': typeof EnShowDeTangoCafeTortoniRoute
   '/pt/show-de-tango-cafe-tortoni': typeof PtShowDeTangoCafeTortoniRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/en/show-de-tango-cafe-tortoni': typeof EnShowDeTangoCafeTortoniRoute
   '/pt/show-de-tango-cafe-tortoni': typeof PtShowDeTangoCafeTortoniRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/pt/show-de-tango-cafe-tortoni'
+  fullPaths:
+    | '/'
+    | '/en/show-de-tango-cafe-tortoni'
+    | '/pt/show-de-tango-cafe-tortoni'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/pt/show-de-tango-cafe-tortoni'
-  id: '__root__' | '/' | '/pt/show-de-tango-cafe-tortoni'
+  to: '/' | '/en/show-de-tango-cafe-tortoni' | '/pt/show-de-tango-cafe-tortoni'
+  id:
+    | '__root__'
+    | '/'
+    | '/en/show-de-tango-cafe-tortoni'
+    | '/pt/show-de-tango-cafe-tortoni'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EnShowDeTangoCafeTortoniRoute: typeof EnShowDeTangoCafeTortoniRoute
   PtShowDeTangoCafeTortoniRoute: typeof PtShowDeTangoCafeTortoniRoute
 }
 
@@ -66,11 +84,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtShowDeTangoCafeTortoniRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/en/show-de-tango-cafe-tortoni': {
+      id: '/en/show-de-tango-cafe-tortoni'
+      path: '/en/show-de-tango-cafe-tortoni'
+      fullPath: '/en/show-de-tango-cafe-tortoni'
+      preLoaderRoute: typeof EnShowDeTangoCafeTortoniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EnShowDeTangoCafeTortoniRoute: EnShowDeTangoCafeTortoniRoute,
   PtShowDeTangoCafeTortoniRoute: PtShowDeTangoCafeTortoniRoute,
 }
 export const routeTree = rootRouteImport
