@@ -176,15 +176,7 @@ function Nav() {
             <a href="#resenas" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Reseñas</a>
             <a href="#faq" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">FAQ</a>
           </nav>
-          <div className="border-t border-white/5 pt-4 flex flex-col gap-3">
-            <div className="flex gap-2">
-              <a href={TICKETS_URL} target="_blank" rel="noopener" className="btn btn-primary flex-1 !py-2.5 text-sm">
-                Comprar ticket
-              </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa flex-1 !py-2.5 text-sm">
-                <WhatsAppIcon className="w-4 h-4" /> Reservar
-              </a>
-            </div>
+          <div className="border-t border-white/5 pt-4">
             <div className="flex items-center gap-1 text-[0.72rem] uppercase tracking-[0.22em] font-semibold">
               <a href="/pt/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">PT</a>
               <span className="text-white/20">·</span>
@@ -241,9 +233,6 @@ function Hero() {
             <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
               <WhatsAppIcon className="w-5 h-5" />
               Reservar por WhatsApp
-            </a>
-            <a href="#horarios" className="btn btn-secondary">
-              Ver horarios disponibles
             </a>
           </div>
 
@@ -716,9 +705,6 @@ function FinalCTA() {
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa">
             <WhatsAppIcon className="w-5 h-5" />
             Reservar por WhatsApp
-          </a>
-          <a href="#horarios" className="btn btn-secondary">
-            Ver horarios disponibles
           </a>
         </div>
         <p className="mt-6 text-tertiary-w text-sm uppercase tracking-[0.22em]">
