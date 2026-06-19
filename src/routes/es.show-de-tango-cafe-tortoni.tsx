@@ -149,42 +149,42 @@ function Nav() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 text-secondary-w hover:text-ambar transition-colors"
-          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-        >
-          {menuOpen ? (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
-              <path d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        {/* Mobile: switcher + hamburger */}
+        <div className="flex md:hidden items-center gap-3">
+          <div className="flex items-center gap-1 text-[0.72rem] uppercase tracking-[0.22em] font-semibold">
+            <a href="/pt/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">PT</a>
+            <span className="text-white/20">·</span>
+            <a href="/en/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">EN</a>
+            <span className="text-white/20">·</span>
+            <span className="text-ambar px-1">ES</span>
+          </div>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 text-secondary-w hover:text-ambar transition-colors"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {menuOpen ? (
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-noir/95 backdrop-blur-md border-t border-white/5 px-5 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-noir/95 backdrop-blur-md border-t border-white/5 px-5 py-6">
           <nav className="flex flex-col gap-5 text-[0.82rem] uppercase tracking-[0.22em] font-semibold text-secondary-w">
             <a href="#show" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Show</a>
             <a href="#horarios" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Horarios</a>
             <a href="#resenas" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Reseñas</a>
             <a href="#faq" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">FAQ</a>
           </nav>
-          <div className="border-t border-white/5 pt-4">
-            <div className="flex items-center gap-1 text-[0.72rem] uppercase tracking-[0.22em] font-semibold">
-              <a href="/pt/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">PT</a>
-              <span className="text-white/20">·</span>
-              <a href="/en/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">EN</a>
-              <span className="text-white/20">·</span>
-              <span className="text-ambar px-1">ES</span>
-            </div>
-          </div>
         </div>
       )}
     </header>
