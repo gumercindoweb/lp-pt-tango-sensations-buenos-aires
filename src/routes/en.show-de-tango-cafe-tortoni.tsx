@@ -67,6 +67,7 @@ export const Route = createFileRoute("/en/show-de-tango-cafe-tortoni")({
       { rel: "canonical", href: CANONICAL_URL },
       { rel: "alternate", hrefLang: "pt-BR", href: "https://sensacionesdetango.com/pt/show-de-tango-cafe-tortoni" },
       { rel: "alternate", hrefLang: "en", href: "https://sensacionesdetango.com/en/show-de-tango-cafe-tortoni" },
+      { rel: "alternate", hrefLang: "es", href: "https://sensacionesdetango.com/es/show-de-tango-cafe-tortoni" },
       { rel: "alternate", hrefLang: "x-default", href: "https://sensacionesdetango.com/en/show-de-tango-cafe-tortoni" },
     ],
     scripts: [
@@ -139,6 +140,8 @@ function Nav() {
             <a href="/pt/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">PT</a>
             <span className="text-white/20">·</span>
             <span className="text-ambar px-1">EN</span>
+            <span className="text-white/20">·</span>
+            <a href="/es/show-de-tango-cafe-tortoni" className="text-tertiary-w hover:text-ambar transition-colors px-1">ES</a>
           </div>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn btn-wa !py-2.5 !px-4 text-sm">
             <WhatsAppIcon className="w-4 h-4" /> Book
